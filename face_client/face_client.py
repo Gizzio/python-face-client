@@ -359,7 +359,7 @@ class FaceClient(object):
                         close_file = True
 
                     try:
-                        form.file(name, name, file.read())
+                        form.file(name, name, str(file.read()))
                     finally:
                         if close_file:
                             file.close()
