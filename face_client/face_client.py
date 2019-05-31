@@ -366,7 +366,7 @@ class FaceClient(object):
             else:
                 for i, buffer in enumerate(buffers, 1):
                     name = 'attachment_%d' % i
-                    form.file(name, name, buffer)
+                    form.file(name, name, str(buffer))
             (content_type, post_data) = form.get()
             headers = {'Content-Type': content_type}
         else:
